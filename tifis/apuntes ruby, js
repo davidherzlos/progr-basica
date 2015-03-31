@@ -1,0 +1,78 @@
+Escribir literales
+
+"Davd".reverse
+El objeto tipo texto "David", tiene un metodo que es reverse, que actua sobre el propio objeto.
+
+objeto.metodo(this)
+
+---
+En ruby todo son metodos
+
+"David" * 5 Da not a number en js y en ruby imprime 5 veces
+
+40.to_s.reverse metodos encadenados, podría oensar que estoy navegando un objeto tipo
+
+var 40 = {
+
+to_s: { reverse: function(){} }
+
+}
+
+Pero no!!, simplemente estoy encadenando funciones:
+
+1 40.to_s.reverse
+2 "40".reverse
+3 "04"
+
+---
+
+Igualito que js, ruby tiene un juego de métodos para los tipos de datos básicos como textos y numeros
+
+
+las variables pueden remplazar a cualquier expresion que incluya los datos guardados en las mismas.
+
+si tengo [3,3,3,3,6].max, lo puedo abreviar usando
+numeros = [3,3,3,3,6]
+numeros.max
+
+importante en js es var f = expresion y en ruby no necesitas palabra reservada
+
+
+En ruby puede modificar directamente el objeto usando !
+
+
+Asignación en ruby ticket = [14, 37, 18]
+Asignacion en js var ticket = [14, 37, 18]
+
+--------
+
+
+Muy interesante en ruby, puedes acceder y modificar los strings como si fueran arrays, en js solo puedes acceder a cada letra o cada posición del arrays o indice.
+
+poema = "Hola a todos"
+
+en js 
+
+poema[0] Dará H
+
+En ruby puedes hacer poema["Hola"] y dará Hola
+
+print poem
+=> "My toast has flown from my hand
+And my toast has gone to the moon.
+But when I saw it on television,
+Planting our flag on Halley's comet,
+More still did I want to eat it."
+Success!
+> poem['toas­t'] = 'hone­ydew'
+=> "honeydew"
+Success!
+> print poem
+=> "My honeydew has flown from my hand
+And my toast has gone to the moon.
+But when I saw it on television,
+Planting our flag on Halley's comet,
+More still did I want to eat it."
+
+
+

@@ -1,0 +1,83 @@
+body {
+	font-size: 16px;
+	margin: 0;
+}
+h1 {
+	font-family: ubuntu;
+	font-size: 2.5em;
+	color: #444448;
+	padding: 0;
+	margin: 0;
+}
+.boton {
+	background: #62859A;
+	border-radius: 0.3em;
+	border: none;
+	padding: 0.5em 1em;
+	font-size: 1.5em;
+	color: white;
+	margin: 1em 0.2em;
+}
+.boton:hover {
+	background: #000;
+	border-radius: 0.3em;
+	border: none;
+	padding: 0.5em 1em;
+	font-size: 1.5em;
+	color: white;
+	margin: 1em 0.2em;
+	cursor: pointer;
+}
+
+.parrafo {
+	font-size: 3em;
+	font-family: ubuntu;
+	color: #7C537E;
+	text-align: left;
+	margin: 0;
+	padding: 0.2em;
+}
+.cajas {
+	padding: 0.4em;
+	margin: 1em 0.5em;
+	padding: 2em 1em;
+	width: 30%;
+	border: rgba(0, 0, 0, 0.1) 1px solid;
+	border-radius: 0.7em;
+}
+.cajas::-moz-placeholder {
+	font-size: 1.5em;
+}
+.datos {
+	text-align: center;
+
+}
+.botones {
+	text-align: center;
+	padding: 1em 0;
+}
+.contenedor {
+	background: #E8DCDC;
+	margin: 0 0;
+	padding: 1em 0;
+}
+.salida{
+	text-align: center;
+	width: 100%;
+	background: white;
+}
+.dpresentacion{
+	margin: 0 0em;
+	width: 40%;
+}
+
+.img-octocat {
+	max-width: 300px;
+}
+.img-octocat .octo-img{
+	width: 100%;
+}
+.dimagen, .dpresentacion{
+	display: inline-block;
+	vertical-align: top;
+}

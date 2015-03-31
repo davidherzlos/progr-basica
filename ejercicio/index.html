@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf8" /> 
+	<title>Saludar en otro idioma</title>
+	<link rel="stylesheet" href="estilos.css">
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+	<section class="contenedor">
+		<article class="datos">
+			<h1>Escribe tus datos</h1>
+			<input class="cajas" type="text" id="inombre" placeholder="Escribe tu nombre"/>
+			<input class="cajas" type="text" id="iprofesion" placeholder="Escribe tu profesion"/>
+			<input class="cajas" type="text" id="iedad" placeholder="Escribe tu edad"/>
+			<input class="cajas" type="text" id="iidioma" placeholder="Escribe tu idioma preferido"/>
+		</article>		
+		<article class="botones">
+			<h1>Preséntate en:</h1>
+			<input type="button" value="Inglés" class="boton" id="eningles" />
+			<input type="button" value="Francés" class="boton" id="enfrances" />
+			<input type="button" value="Aleman" class="boton" id="enaleman" />
+		</article>
+		<article class="salida">
+			<div class="dimagen">
+				<figure class="img-octocat">
+					<img class="octo-img" src="octocat-muertos.jpg"></img>	
+				</figure>
+			</div>
+			<div class="dpresentacion">
+				<p class="parrafo" id="presentacion"></p>
+			</div>
+
+		</article>
+	</section>
+	<script type="text/javascript">
+		iniciar();
+	</script>	
+</body>
+</html>

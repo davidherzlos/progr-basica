@@ -1,5 +1,4 @@
-
-alert('Hola, este es un alert antes del DOM Content Loaded');
+console.log("Javascript cargado");
 
 function Pokemon(n,v,a,g){
 	this.nombre = n;
@@ -22,7 +21,6 @@ function iniciar(){
 
 var david = new Pokemon("David",80,50,"Orale cabrón");
 var daniel = new Pokemon("Daniel",70,60,"Hay mamachita");
-
 
 
 function assignvaluesDavid(){
