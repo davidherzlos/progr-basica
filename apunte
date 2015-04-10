@@ -1,0 +1,31 @@
+Javascript, Web sockets, Canvas, SVG (JS y html5), semántica de HTML, offline storage, device accessm conectividad: capaciad de conectarnos en tiempo real, Multimedia (audio y video), no es una sola tecnología. La capacidad de quitarle al video de flash y volverlo una standar.  Flash hace drm (digital rights management), Gráficos 3dD AND EFFECTS
+
+Canvas: capacidad de dibujar y se puede manipular efectos y se pueden manipular como mapa de bits, lo único que no hace es 3D, 
+
+SVG gráficos vectoriales, adobe puede exportar a html5
+
+Local storage: guardar archivos en disco, es el remplazo de las cookies(100 kb).
+
+Las cookies están pegadas a todas las peticiones http, si guardamos 100kb en cookies, cada que hay una petición, se van todas las cookies. Las cookies son una porquería, sólo pueden servir 
+
+Session storage
+
+Web sql - Aún no es un standar, cada sql es diferente dependiendo el motor de base de datos.
+
+Device access, capacidad de acceder al hardware, a toda la pantalla, al giroscopio, acceder a los acelerometros, al gps, a la ubicación. 
+
+Los teléfonos son los que mejor reciben html5, con sólo wifi html5 puede obtener tu localización, no se necesita el gps, sólo el navegador.
+
+Performance and integration, html y JS pueden hacer mulitarea, webworkers. Facebook usa webworkers.
+
+Internet explorer tiene un motor veloz de js, investigar que motores de js usan los navegadores.
+
+Adobe se compró phonegap. Se puede hacer multiplataforma con html5, se puede hacer una aplicación y convertirla a una nativa.
+
+Connectivity, se usan websockets y html5, con nodejs, puedes remplazr php con javascript, se puede hacer un cambio en el lado del server y que se refleje inmediatamente en el cliente.
+
+Esto lo hace websockets. Con una librería con sockets.io
+
+CSS3:
+
+
