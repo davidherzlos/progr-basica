@@ -1,0 +1,90 @@
+Elementos del lenguaje algorítmico
+
+const
+fconst
+
+var
+fvar
+
+tipo
+ftipo
+
+algoritmo
+falgoritmo
+
+conversion de tipos
+realAEntero
+enteroAReal
+caracterAcódigo
+
+codigoACaracter
+
+Condiciones:
+{pre: }
+	Accion1;
+	Accion2;
+
+{post:}
+
+Encabezamiento
+Definición de constantes
+Definición de tipos
+Declaración de variables
+Cuerpo del algoritmo
+Final del algoritmo
+
+
+algoritmo nombre;
+
+const
+	nombreConstante1:  tipo = valor1;
+	nombreConstante2:  tipo = valor2;
+fconst
+
+tipo
+	nombreTipo1 = definicionTipo1;
+	nombreTipo2 = definicionTipo2;
+
+ftipo
+
+var
+	nombreVariable1: tipo = valor1;
+	nombreVariable2: tipo = valor2;
+fvar
+
+	Accion1;
+	Accion2;
+	Accion3;
+	{pre:}
+	nombreVariable:= expresion;
+	{post:}
+
+falgoritmo
+
+
+ejercito nacional 244
+entre lienbitz y kepler int. 302, polanco, san cosme
+
+
+
+
+
+=suma([])
+
+
+
+interacciones
+(average([[928]];[[929]];[[936]];[[938]];[[944]];[[945]];[[946]];[[947]])/10)
+
+tareas
+
+
+
+ec
+
+=sum(average([[H]];[[I]];[[J]])/30, average([[928]];[[929]];[[936]];[[938]];[[944]];[[945]];[[946]];[[947]])/10)
+
+
+
+
+=sum((average( [[H]];[[I]];[[J]] )/0.1); (average([[928]];[[929]];[[936]];[[938]];[[944]];[[945]];[[946]];[[947]] / 0.3)))
