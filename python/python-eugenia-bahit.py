@@ -13,7 +13,7 @@ mi_variable = 123
 
 mi_variable  =  123
 mivariable = 123
-miVariable = 123 # Esto sí se podría con javascript
+miVariable = 123  # Esto sí se podría con javascript
 
 # Cadenas de varias lineas
 
@@ -26,10 +26,11 @@ lineas"""
 boleano = True
 boleano = False
 
+# El pep8 define las reglas de estilo para escribir en python, es muy importante revisarlo
 
 # Otra regla del pep8: siempre utiliza espacio antes y después de cualquier operador
 
-23423 ** 3
+23423 ** 3  # Así
 "wretert" + "345sdf"
 
 
@@ -39,9 +40,9 @@ boleano = False
 # FIXME: esto significa algo por corregir
 # XXX: esto también significa que algo se debe corregir
 
-# Los comentarios deben tener dos espacios de eperación del código, en caso de estar en la misma linea, y uno entre el simbolo y el texto
+# Los comentarios deben tener dos espacios de separación del código, en caso de estar en la misma linea, y uno entre el simbolo y el texto
 
-print "Hola"  # Imprimí mi nombre
+print "Hola"  # Imprimí mi nombre y escribí un comment correctamente
 
 #En python el código se debe identar a 4 espacios
 
@@ -51,7 +52,7 @@ print "Hola"  # Imprimí mi nombre
 # _*_ coding: utf-8_*_
 
 
-# Tiene algo como la asignación múltiple de variables, ejemplos:
+# También tiene algo como la asignación múltiple de variables, ejemplos:
 
 var_uno, var_dos, var_tres = 123123, "Hola mundo", True  # Asignación paralela de variables
 
@@ -69,7 +70,8 @@ else:
 	print "¿Pues qué chingados?"
 
 
-"""Tipos de datos complejos, estos tipos son colecciones de datos"""
+"""Tipos de datos complejos, 
+estos tipos son colecciones de datos"""
 
 # Ahora vamos con los tipos de datos mas complejos
 
@@ -85,7 +87,7 @@ mi_tupla[1:3]  # Accediendo del indice 1 al 3
 
 # Listas
 
-mi_lista = [1, "dos", True, False, []]  # La lista se parece mucho a un array, sus valores pueden ser cambiados, aunque sea inmutables
+mi_lista = [1, "dos", True, False, []]  # La lista se parece mucho a un array, sus valores pueden ser cambiados, permite la mutabilidad.
 
 mi_lista[2]  # Se accede igual que en las tuplas
 
@@ -156,9 +158,9 @@ def foo(dato):  # Defino mi función
 	
 imprimir = foo("Feliz navidad soquetes")  # La invocación se hace sin punto y coma
 
-"""Parámetros de as funciones"""
+"""Parámetros de las funciones"""
 
-# Un parámetro, es un valor que el entorno local (función), recibe del entorno global, como en todos lados se separab por comas y pueden ser tantos argumentos como sean necesarios, python considera los parámetros como variables de ámbito local dentro de la función
+# Un parámetro, es un valor que el entorno local (función), recibe del entorno global, como en todos lados se separa por comas y pueden ser tantos argumentos como sean necesarios, python considera los parámetros como variables de ámbito local dentro de la función
 
 
 def otra_funcion(nombre, apellido, edad, genero):
@@ -225,7 +227,7 @@ class Rueda:
 class Bicicleta:
 	color = "negro"
 	ruedas = Rueda()
-	def rodar(self):  # Siempre se define self como parámetro d
+	def rodar(self):  # Siempre se define self como parámetro del método
 		# Algoritmo
 
 # Creando algunos objetos (instanciar objetos)
@@ -251,7 +253,7 @@ class Pierna(object):  # Composición
 class Mamifero(object):  # Una clase con un atributo Objeto (otra clase: técnica de composicion)
 	piernas = pierna()
 
-# Herencia ahora sí, un humano que obtenga todo lo anterior, mas sus cualidades como humano
+# Herencia ahora sí, un mamifero que obtenga todo lo anterior, mas sus cualidades como humano
 
 class Ropa(object):  # Se le pasa como parámetro object, pues heredará de object, la clase principal de python que define todos los objetos
 	color = "Negra"
@@ -262,35 +264,3 @@ class Humano(Mamifero):  # Se le pasa como parámetro la clase de la cual va a h
 	su_ropa = Ropa()
 	def pensar(self):
 		# Algoritmo
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		
-
-
-
-
-
-
-
-
-
-
-
-
-
-

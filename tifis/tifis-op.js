@@ -1,3 +1,5 @@
+// Variables globales
+
 var tablero;
 var posicion = [ "atras", "frente", "izq", "der" ];
 var rumbo;
@@ -13,6 +15,8 @@ var tecla = {
 	left: 37,
 	right: 39
 };
+
+// Constructor de fondo
 function Fondo () {
 	this.URL = "fondo.png";
 	this.OK = false;
@@ -27,6 +31,8 @@ function Fondo () {
 		};
 	};
 };
+
+// Constructor de Tifis
 function Tifis (postura) {
 
 	this.URL = "diana-" + postura + ".png";
@@ -40,6 +46,8 @@ function Tifis (postura) {
 		};
 	};
 };
+
+// Constructor de Liz
 function Liz () {
 
 	this.URL = "liz.png";
@@ -55,6 +63,8 @@ function Liz () {
 		};
 	};
 };
+
+// Dibujar todos los canvas
 function renderDibujo (rumbo) {
 
     var canvas = document.getElementById("campo");
@@ -73,8 +83,11 @@ function renderDibujo (rumbo) {
 	liz.imagen.onload = liz.dibujar;
 
 };
+
+//Escuchar cuando el usuario persiona la tecla
 document.addEventListener("keydown", capturarFlecha);
 
+// Determinar rumbo para que tifis avance
 function capturarFlecha (keypressed){ // Averiguar porqué pude acceder a un parámetro que no se que es
 
 	tecla.presionada = keypressed.keyCode;
