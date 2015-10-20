@@ -1,20 +1,35 @@
+// Comprobar que funciona el js
+
+console.log("Funciona");
+
 // Variables globales
 
+// Tablero del canvas
 var tablero;
+// Indica la posición del personaje, son 4 imagenes de distinta posición
 var posicion = [ "atras", "frente", "izq", "der" ];
+// Indica el rumbo que debe tomar el personaje según la tecla de dirección presionada
 var rumbo;
+// Fondo del pastito
 var fondo;
+// Personaje Tifis
 var tifis;
+// Personaje Liz
 var liz;
+// Indica la dirección de algo, averiguar qué
 var direccion;
+// La posición de tifis en el dibujo con valores pos defecto
 var	posicionX = 100;
 var	posicionY = 100;
+//Códigos aski de las teclas de dirección
 var tecla = {
 	up: 38,
 	down: 40,
 	left: 37,
 	right: 39
 };
+
+/****************Funciones contructoras*****************/
 
 // Constructor de fondo
 function Fondo () {
@@ -84,7 +99,7 @@ function renderDibujo (rumbo) {
 
 };
 
-//Escuchar cuando el usuario persiona la tecla
+//Escuchar cuando el usuario presiona alguna tecla de dirección
 document.addEventListener("keydown", capturarFlecha);
 
 // Determinar rumbo para que tifis avance

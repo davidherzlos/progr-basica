@@ -1,42 +1,44 @@
-alert("Hola");
+/*
+	Dibujar el poste
+	Determinar la palabra
+	Cargar elementos de la persona
+		Cabeza
+		torso
+		brasos
+		pies
+		ojos de ahorcado
+	Elegir las letras
+		Si la letra existe
+			se imprime Letra donde corresponde
+		SI no
+			Agrega elemento al ahorcado
+		Si ya se dibujaron todos los elementos del ahorcado
+			perdí
+		Si se imprimieron todas las letra de mi palabra
+			Gané
+*/
 
-function inicio(){
+var palabra = "Tamarindo";
+var hombre; 
 
+// Declaración de la clase ahorcado
 
-
-
-
-
-
-
-
-
-
-
-
-
-	
+var Ahorcado = function(con){
+	this.contexto = con;
+	this.maximo = 5;
+	this.intentos = 0;
 };
 
-/*
-	1. Dibujar el poste
-	2. Determinar la palabra
-	3. Proceso para dibujar al ahorcado
-		3.1. Dibujar la cabeza
-		3.2. Torso
-		3.3. Brazos
-		3.4. Pies
-		3.5. Ojos muertos
-	4. Elegir letras
-	5. Evaluar las letras
-		Si la letra existe
-			Pongo en lista
-		Si no
-			Agrego un trazo al ahorcado
-	6. Evaluar el estado del dibujo ahorcado
-		Si ya dibujé al ahorcado completo
-			Perdí
-		Si no
-			Gané
-Esto lo podrías refinar super chido con la ayuda del lenguaje algoritmico
-*/
+function inicio () {
+	var canvas = document.getElementById("c");
+	canvas.width = 500;
+	canvas.height = 400;
+	var contexto = canvas.getContext("2d");
+	hombre = new Ahorcado(contexto);
+};
+
+
+
+
+
+
