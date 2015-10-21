@@ -18,11 +18,42 @@
 			Gané
 */
 
-var palabra = "Tamarindo";
-var hombre; 
+var palabraFormada = [];
+
+// Función de inicio
+function inicio () {
+
+	var palabra = "Holanda";
+	var b = document.getElementById('boton');
+
+	var letra = document.getElementById('letra');
+
+	b.addEventListener('click', buscarLetra);
+
+	function buscarLetra(){
+		var letraEncontrada = false;
+		var i = 0;
+		while(i <= palabra.length -1){
+			if(letra.value === palabra[i]){
+				letraEncontrada = true;
+				palabraFormada[i] = letra.value;
+			}
+			i++;
+		}
+		palabraFinal = palabraFormada.join('');
+
+		if (palabraFinal == palabra){
+			alert("Ganaste " + palabraFinal);
+		}else{
+			alert("Aún no ganas");
+		}
+
+	}
+}
+
 
 // Declaración de la clase ahorcado
-
+/*
 var Ahorcado = function(con){
 	this.contexto = con;
 	this.maximo = 5;
@@ -37,8 +68,4 @@ function inicio () {
 	hombre = new Ahorcado(contexto);
 };
 
-
-
-
-
-
+*/
