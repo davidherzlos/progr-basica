@@ -1,72 +1,88 @@
-/*
-	YDibujar el poste
-	N Determinar la palabra
-	Y Cargar elementos de la persona
-	Y	Cabeza
-	Y	torso
-	Y	brasos
-	Y	pies
-	Y	ojos de ahorcado
-	YElegir las letras
-	Y	Si la letra existe
-	Y		se imprime Letra donde corresponde
-	Y	SI no
-	Y		Agrega elemento al ahorcado
-	Y	Si ya se dibujaron todos los elementos del ahorcado
-	Y		perdí
-	Y	Si se imprimieron todas las letra de mi palabra
-	Y		Gané
-*/
-var poolPalabras = [["Holanda", "Es un país de Europa"],
-				 ["Antropología", "Es una ciencia que se da en la ENHA"],
-				 ["Kanguro", "Es un animal australiano"],
-				 ["Gas", "¿Qué vende el señor gritón de la mañana?"],
-				 ["Gorra", "Siempre se le rompe a Fay en la alberca"],
-				 ["Regla", "Mide 30cm"],
-				 ["Blanco", "Color que reune todos los colores"],
-				 ["Alberca", "Tiene mucho cloro"],
-				 ["Corcho", "El material de las tapas del vino"],
-				 ["Azul", "Coor del mar"],
-				 ["Python", "Lenguaje de programación inspirado en unos comediantes"]
-				 ];
 
 var palabraFormada = [];
-
-// Función de inicio
+var palabra;
 function inicio () {
-
-	var intentos = 1;
-	var palabra = "";
-
-	// Determinar palabra e imprimirla en documento
 	
-	function getPalabra () {
-		palabra = poolPalabras[Math.floor(Math.random() * poolPalabras.length)];
+	// Banco de palabras y pistas
+	var poolPalabras = [["Holanda", "Es un país de Europa donde se hace queso de bola"],
+					 ["Antropología", "Es una ciencia que se enseña en la ENHA"],
+					 ["Kanguro", "Es un animal australiano que usa guantes de box"],
+					 ["Gas", "¿Qué vende el señor gritón de la mañana?"],
+					 ["Gorra", "Siempre se le rompe a Faby en la alberca"],
+					 ["Regla", "Mide 30cm"],
+					 ["Blanco", "Color que reune todos los colores"],
+					 ["Alberca", "Tiene mucho cloro"],
+					 ["Corcho", "El material de las tapas del vino"],
+					 ["Azul", "Color del mar del caribe"],
+					 ["Como postres", "Apodo de la Faby"]
+					 ];
+
+	// DOM element: pista
+	var pista = document.getElementById('pista');
+
+	// DOM element: imagen
+	var imagenAhorcado = document.getElementById('imagen');
+
+	// DOM element: botón
+	var b = document.getElementById('boton');
+	b.addEventListener('click', buscarLetra);
+
+	// DOM element: letra
+	var letra = document.getElementById('letra');
+
+	// DOM element: casillas
+	var casillas = document.getElementById('casillas');
+
+
+
+	// Cargar palabra aleatoria
+
+	function generarPalabra () {
+		word = poolPalabras[Math.floor(Math.random() * poolPalabras.length)];
+		pista.innerText = word[1];
+		return word[0];
+	};
+
+	function reiniciarJuego(){
+		intentos = 1;
+		palabraFormada = [];
+		letra.value = "";
+		palabra = generarPalabra();
+		casillas.innerText = "";
+		imagenAhorcado.src = "ahorcado-" + 1 + ".jpg";
+			console.log("La palabra aleatoria es: " + palabra);
 	}
 
-	// DOM elements
+	var palabra = generarPalabra();
+	
+	console.log("La palabra aleatoria es: " + palabra);
 
-	var textoenDoc = document.getElementById('palabra');
-	var imagenAhorcado = document.getElementById('imagen');
-	var b = document.getElementById('boton');
-	var letra = document.getElementById('letra');
-	b.addEventListener('click', buscarLetra);
+
+
+	var intentos = 1;
+
+
+
+
 
 	// Buscar la letra, imprimirla y validar si ganaste
 	function buscarLetra(){
+		
 		var letraEncontrada = false;
 		var i = 0;
 		while(i <= palabra.length -1){
 			if(letra.value == palabra[i]){
-				letraEncontrada = true;
+				
+				letraEncontrada = true; 
 				palabraFormada[i] = letra.value;
 				palabraFinal = palabraFormada.join('');
 				console.log(palabraFinal);
+				casillas.innerText = palabraFinal;
+				letra.value = "";
+				
 				if(palabraFinal == palabra){
 					alert("Ganaste");
-					palabraFormada = [];
-					letra.value = "";
-					// Aquí hace falta cargar una nueva palabra
+					reiniciarJuego();
 				}
 			}
 			i++;
@@ -75,29 +91,13 @@ function inicio () {
 		if(letraEncontrada == false){
 			intentos++;
 			imagenAhorcado.src = "ahorcado-" + intentos + ".jpg";
-			if(intentos == 6){
-				alert("perdiste");
+			imagen.onload = function(){			
+				if(intentos == 6){
+					alert("perdiste");
+					reiniciarJuego();
+				}
 			}
 		}
 
 	}
 }
-
-
-// Declaración de la clase ahorcado
-/*
-var Ahorcado = function(con){
-	this.contexto = con;
-	this.maximo = 5;
-	this.intentos = 0;
-};
-
-function inicio () {
-	var canvas = document.getElementById("c");
-	canvas.width = 500;
-	canvas.height = 400;
-	var contexto = canvas.getContext("2d");
-	hombre = new Ahorcado(contexto);
-};
-
-*/
