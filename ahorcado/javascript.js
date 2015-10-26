@@ -1,20 +1,18 @@
-
-var palabraFormada = [];
 var palabra;
 function inicio () {
 	
 	// Banco de palabras y pistas
-	var poolPalabras = [["Holanda", "Es un país de Europa donde se hace queso de bola"],
-					 ["Antropología", "Es una ciencia que se enseña en la ENHA"],
-					 ["Kanguro", "Es un animal australiano que usa guantes de box"],
-					 ["Gas", "¿Qué vende el señor gritón de la mañana?"],
-					 ["Gorra", "Siempre se le rompe a Faby en la alberca"],
-					 ["Regla", "Mide 30cm"],
-					 ["Blanco", "Color que reune todos los colores"],
-					 ["Alberca", "Tiene mucho cloro"],
-					 ["Corcho", "El material de las tapas del vino"],
-					 ["Azul", "Color del mar del caribe"],
-					 ["Como postres", "Apodo de la Faby"]
+	var poolPalabras = [["Holanda", "Es un país de Europa"],
+					 ["Antropología", "Es una ciencia"],
+					 ["Kanguro", "Es un animal"],
+					 ["Gas", "Señor Gritón"],
+					 ["Gorra", "Objeto"],
+					 ["Regla", "30cm"],
+					 ["Blanco", "Color"],
+					 ["Alberca", "Tiene agua"],
+					 ["Corcho", "Material"],
+					 ["Azul", "Color"],
+					 ["Comepostres", "Apodo"]
 					 ];
 
 	// DOM element: pista
@@ -32,7 +30,7 @@ function inicio () {
 
 	// DOM element: casillas
 	var casillas = document.getElementById('casillas');
-
+	var casillasGuion ;
 
 
 	// Cargar palabra aleatoria
@@ -40,55 +38,50 @@ function inicio () {
 	function generarPalabra () {
 		word = poolPalabras[Math.floor(Math.random() * poolPalabras.length)];
 		pista.innerText = word[1];
+		casillasArray = new Array(word[0].length).fill("_");
+		casillas.innerText = casillasArray.join('');
+		console.log("Respuesta: " + word[0]);
 		return word[0];
 	};
 
 	function reiniciarJuego(){
 		intentos = 1;
-		palabraFormada = [];
 		letra.value = "";
 		palabra = generarPalabra();
-		casillas.innerText = "";
 		imagenAhorcado.src = "ahorcado-" + 1 + ".jpg";
-			console.log("La palabra aleatoria es: " + palabra);
 	}
 
 	var palabra = generarPalabra();
-	
-	console.log("La palabra aleatoria es: " + palabra);
 
 
-
+	// Intentos fallidos: cada uno ahorca
 	var intentos = 1;
-
-
-
 
 
 	// Buscar la letra, imprimirla y validar si ganaste
 	function buscarLetra(){
+		if(letra.value == ""){
+			alert("Por favor introduce una letra");
+		}
 		
 		var letraEncontrada = false;
 		var i = 0;
-		while(i <= palabra.length -1){
-			if(letra.value == palabra[i]){
-				
-				letraEncontrada = true; 
-				palabraFormada[i] = letra.value;
-				palabraFinal = palabraFormada.join('');
-				console.log(palabraFinal);
-				casillas.innerText = palabraFinal;
-				letra.value = "";
-				
-				if(palabraFinal == palabra){
-					alert("Ganaste");
-					reiniciarJuego();
-				}
+		while(i <= palabra.length -1 && letra.value != ""){
+			if(letra.value.toLowerCase() == palabra[i].toLowerCase()){
+				letraEncontrada = true; 	
+				casillasArray[i] = letra.value;
+				casillas.innerText = casillasArray.join('');
 			}
 			i++;
 		}
+
+		if(casillas.innerText.toLowerCase() == palabra.toLowerCase()){
+			alert("Ganaste");
+			reiniciarJuego();
+		}
+
 		// Ahorcar y validar si perdiste
-		if(letraEncontrada == false){
+		if(letraEncontrada == false && letra.value != ""){
 			intentos++;
 			imagenAhorcado.src = "ahorcado-" + intentos + ".jpg";
 			imagen.onload = function(){			
@@ -99,5 +92,6 @@ function inicio () {
 			}
 		}
 
+		letra.value = "";
 	}
 }

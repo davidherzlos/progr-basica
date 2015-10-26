@@ -4,15 +4,26 @@
 	<meta charset="UTF-8">
 	<title>Ahorcado</title>
 	<script src="javascript.js"></script>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<h1>Juego del ahorcado</h1>
-	<img src="ahorcado-1.jpg" alt="Ahorcado" id="imagen">
-	<p>Introduce una letra</p>
-	<input type="text" id="letra" />
-	<input type="button" value="Enviar" id="boton">
-	<h1 id="casillas"></h1>
+	<h1 class="titulo">Juego del ahorcado</h1>
+	
+	<img class="imagen-ahorcado" src="ahorcado-1.jpg" alt="Ahorcado" id="imagen">
+
+	<h1 class="casilla" id="casillas"></h1>
+	
+	<div class="formulario">
+		<p>Escribe una letra: </p>
+		<input class="form" type="text" id="letra" maxlength = "1" />
+		<input class="boton" type="button" value="Sálvalo" id="boton">
+	</div>
+
+
 	<h2 id="pista"></h2>
+
+
+	
 	
 
 	<script type="text/javascript">

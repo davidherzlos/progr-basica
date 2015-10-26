@@ -1,0 +1,112 @@
+
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+html {
+	background: #F1D2F1;
+	font-size: 100%;
+	min-width: 200px;
+}
+body {
+	text-align: center;
+	margin: 0.7rem 0.7rem;
+	padding: 0.5rem 0;
+	font-size: 16px;
+	font-family: 'Roboto', sans-serif;
+	background: white;
+	border-radius: 0.4rem;
+}
+
+.titulo {
+	margin: 0.5rem; auto;
+	font-size: 1.5rem;
+	text-align: center;
+	font-weight: bold;
+	color: #4C284C;
+}
+.imagen-ahorcado{
+	width: 100%;
+	max-width: 273px;
+}
+
+
+.casilla{
+	height: 2rem;
+	letter-spacing: 0.5rem;
+	text-transform: capitalize;
+	color: #A3A3D9
+
+}
+
+
+.formulario{
+	background: #A3D9A3;
+	text-align: center;
+	padding: 1rem 0;
+}
+
+.formulario p {
+	margin: 0;
+	padding: 0;
+}
+
+.formulario p, .formulario .form{
+	display: inline-block;
+}
+
+.form{
+	text-align: center;
+	width: 2rem;
+	font-size: 1.5rem;
+	color: red;
+	padding: 0.6rem;
+	border: 1px solid #DCDCDC;
+}
+.boton{
+	background: #A3A3D9;
+	border: none;
+	font-size: 1.5rem;
+	padding: 0.7rem;
+	border-radius: 0.3rem;
+
+}
+.boton:hover{
+	background: #A06AA0;
+	border: none;
+	font-size: 1.5rem;
+	padding: 0.7rem;	
+}
+
+
+
+
+/*Media querys*/
+
+@media screen and (min-width: 500px) and (orientation: landscape) {
+
+	.imagen-ahorcado{
+		max-width: 273px;
+	}
+	.casilla{
+		font-size: 4em;
+		letter-spacing: 0.5rem;
+		text-transform: capitalize;
+		color: #A3A3D9;
+	}
+	.imagen-ahorcado, .casilla{
+		display: inline-block;
+		vertical-align: middle;
+
+	}
+
+
+
+
+}
+
+
+
+
+
+
+
+
