@@ -69,7 +69,7 @@ function inicio () {
 		while(i <= palabra.length -1 && letra.value != ""){
 			if(letra.value.toLowerCase() == palabra[i].toLowerCase()){
 				letraEncontrada = true; 	
-				casillasArray[i] = letra.value;
+				casillasArray[i] = letra.value.toLowerCase();
 				casillas.innerText = casillasArray.join('');
 			}
 			i++;
