@@ -11,7 +11,8 @@ mi_variable = 123
 
 # Forma incorrecta
 
-mi_variable  =  123
+mi_variable = 123
+
 mivariable = 123
 miVariable = 123  # Esto sí se podría con javascript
 

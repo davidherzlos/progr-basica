@@ -1,0 +1,125 @@
+# Aprender a programar
+
+El viaje que me he aventado desde hace 2 años para aprender a programar vale mucho la pena, pero en el camino se puede sufrir un poco si no se lleva un orden. Desde mi punto de vista, esta es la forma que me ha funcionado para aprender:
+
+## Primero, para activar mis conocimientos previos:
+
+A nivel de cada lenguaje:
+ 	- Sintaxis
+	- conocer el lenguaje y reglas básicas (muy básicas, debe ser rápido)
+	- conocer de manera básica, tipos operadores, expresiones, acciones, funciones, condicionales, loops y variables.
+
+En este nivel sólo importa conocer como es un lenguaje en lo general y hay que limitarse a reproducir y entender los ejemplos y explicaciones, sin ahondar mas.
+
+Recursos idóneos: tutoriales rápidos o referencias, tracks de code academy.
+
+## Después para reorganizar la información, darle sentido e incorporar nueva en un marco general:
+
+A nivel general de ciencias de la computación (Algoritmos, POO y lo que venga):
+	- Me enfoco en tener una explicación clara de los conceptos y sus relaciones.
+	- Intento hacer una secuencia lógica entre los temas que estudio, de manera que sea facil recordarla.
+	- Intento que el aprendizaje sea detallado, pero sin entrar en la particularidad de ningún lenguaje.
+	- Valido si ese aprendizaje cubre las necesidades para aprender cualquier lenguaje desde este marco general.
+
+Recursos idóneos: Mapas conceptuales, redes semánticas, dibujos, ejemplos, descripciones, explicaciones, modelos y organizadores de información.
+
+## Experienciar lo aprendido poniendolo a prueba:
+
+Aprendo simultáneamente los 3 lenguajes meta (ruby, python y js) tomando siempre como punto de partida las ciencias de la computación en python:
+	- Sólo se debe validar en general y entender que cada lenguaje tiene reglas y excepciones de manera heterogenea, conviene no tratar de memorizarlos todos, sólo los importantes.
+	- Las particularidades no significan un impedimento. Sólo es necesario tomarlas en cuenta y reflexionarlas desde el marco general aprendido.
+	- Aprendo temas clave en orden de dificultad y tomo el marco general de la algoritmica. Recuerda, la algoritmica y python mandan antes. 
+	- Aprendo lo que evaluo me permitirá escribir programas más rápido (Sondeo de qué es importante aprender)
+	- Abordo tema por tema, con tiempo suficiente para cada uno, se recomienda ser lo mas sistemático posible en esta etapa.
+	- Lo importante es que saber que estos tres lenguajes siguen casi los mismos principios y conceptos, pero cada uno a su manera, en mayor o menor grado
+
+Lo que debo ver aquí es:
+
+	Nivel Básico:
+		Variables
+		Clases (Básico, contructores, instancias)
+		Objetos (Explorarlos en la documetación, los de toda la vida)
+			Métodos (Definirlos, incovarlos, explorarlos)
+			Mutabilidad (Probar cada tipo, para ver su mutabilidad)
+		Expresiones básicas sin detalles (Sólo conocer qué operadores hay)
+		Composición básica de acciones(selectivas e iterativas, nada de detalle solo saber que existen)
+		Funciones (Definir, invocar, entornos o scopes, argumentos(tipos, orden, etc), acciones o funciones(return y efectos laterales), pase por valor o referencia, recursividad)
+		Cómo se organiza un entorno con sus objetos (Namespaces, contextos y scopes)
+
+	Nivel intermedio:
+		Variables (Poniendo énfasis en los espacios de nombres y módulos)
+		Clases (Herencia, prototipos, metaprogramación y polimorfismo, y clases mas complejas como regexp)
+		Objetos (Va de la mano con lo anterior, prototipos, dominarlos mejor, sobretodo los complejos)
+			Métodos (publicos, privados, estáticos o dinámicos, y temas que sean importantes que aún no se)
+			Mutabilidad (Probar en escenarios mas complejos)
+		Expresiones(operadores, precedencia y asociatividad, expresiones mas complejas con ejercicios, sobrecarga de operadores)
+		Composición básica de acciones(sentencias mas avanzadas, como excepciones, break, etc; tratamiento secuencial usando todas las opciones)
+		Funciones (Closures, funciones recursivas, callbacks, y otras temas importantes, memoization, aquí cada lenguaje podría particularizarse un poquito)
+		Cómo se organiza un entorno con sus objetos (Relación intrínseca entre contextos y scopes, también namespaces, pensar en proyectos grandes)
+
+	Nivel avanzado:
+		Patrones de diseño(ver cómo funcionan en cada lenguaje)
+		Cosas avanzadas que aún no se.
+		Dimensiones que he identificado que me ayuda  a programar: (Organización, Estrcuturas, Esquemas de tratamiento secuencial, Entender como todo lo anteior va junto)
+		Cómo las bases pueden explicar y posibilitar el uso avanzado del lenguaje (ej, en frameworks y librerías, código hecho por otros.)
+		Explorar APIS y objetos no nativos, como el dom
+
+Recursos idóneos: Documentación, selección de libros, IDE's, problemas, ejemplos y pequeños ejercicios, herramientas para hacer debuging y testing, así como evaluación del código en tiempo de ejecución.
+
+## Profundizar el uso del lenguaje consolidando el aprendizaje
+
+Lo importante aquí es ya usar plenamente el lenguaje:
+	Se trabaja un lenguaje a la vez
+	Tomo en cuenta el marco general y lo aprendido
+	Recapitulo el lenguaje completo, intentando tener toda la documentación para consulta y pongo atención a todos los detalles
+	Hago ya el desarrollo real según el framework y problema que vaya a resolver.
+
+Recursos idóneos: Problemas reales, como moocs, cursos, productos y proyectos personales, código voluntario, documentación oficial, código que han hecho otros, Mis cursos de platzi.
+
+
+### Preguntas frecuentes
+
+¿Para qué me sirve el marco general?
+- Para validar si el lenguaje se comporta de la manera esperada
+- Para identificar diferencias entre lenguajes. Estas diferencias no deben distraer el aprendizaje, sólo notarlas.
+- Para validar si lo aprendido en el marco general me fue util y si no modificar los conceptos
+
+¿Qué pasa al encontrar cada vez mas libros y no saber si todos dicen lo mismo??
+- Selecciona libros base según sus temas y tomalos como la única fuente hasta que llegues a la etapa de profundización del lenguaje, en donde podrás utilizar todos.
+¿Qué pasa si ya avancé mucho, pero hay un libro básico que vale la pena?
+- Consultalo y ponlo a prueba con lo que ya sabes, sólo valídalo y de ser muy importante intégralo
+¿Qué pasa si un libro llama lo suficiente mi atención para distraerme?
+- Lo puedo posponer para leerlo en algún otro momento o lo leo y busco su equivalente para los otros lenguajes
+
+### A donde ir si siento que esta metodología empieza a ser buena:
+- A patrones de diseño
+- A Patrones arquitectónicos
+- A estudiar arquitecturas de aplicacones web
+- A tecnologías particulares basadas en el lenguaje
+- A uso de frameworks
+- A bases de datos
+- A reforzar mateméticas, lógica, etc.
+- A realizar metacongnición
+- A POO y algoritmica avanzada
+
+### Algunos consejos o guías:
+
+- Python es una mezcla de posibilidades y flexibilidad con un estilo correcto y forma correcta de entender la programación. Es muy util para aclarar o desambiguar problemas. Es mi lenguaje meta a mediano plazo.
+
+- Javascript es un lenguaje muy flexible, menos que python, pero es facil de entender si se ha entendido previamente python. Lo bueno de JS es que hay infinidad de posibilidades de aplicarlo en el mundo real, y en reaidad es mi lenguaje meta a corto plazo.
+
+- Ruby es un lenguaje que por lo general sigue los mismos proncipios de la programación, pero su nivel de expresividad es superior y bastante flexible. De ello derivan variantes en su sintaxis que pueden ser a primera vista mas complejas y poco familiares, pero si se entiende bien python, no representará mayor problema. Es mi lenguaje meta a largo plazo.
+
+
+
+
+Importante:
+
+EN javascript: la precedencia de los operadores sigue la convención de las matemáticas: PEMDAS
+
+P: parentesis
+E:exponentes
+M: multiplicación, modulo
+D: división
+A: sumas
+S: restas

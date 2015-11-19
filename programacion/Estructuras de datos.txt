@@ -1,0 +1,22 @@
+# Estructuras de datos
+# En el principio de los tiempos fueron las clases o tipos:
+# Las clases se instancían o reproducen en objetos concretos (entorno)
+# Los objetos tienen un nombre, un valor y un tipo
+# El tipo indica su clase o tipo del que fueron creados; el nombre es la referencia a ese objeto en memoria (variable, este nombre vive dentro del namespace que lo aloja, y el valor especifica el valor de ese objeto acorde al conjunto de valores que son inehrentes a su clase o tipo.
+# El tipo epecifica sus posibles valores, su sintaxis y sus operaciones internas y externas
+# Todos los valores de los objetos son expresiones.
+# Las expresiones son de tipo literal(usa valores específicos), y no literal(usa valores creados mediante operandos y métodos y otros objetos). Una expresión es todo lo que puede evaluarse para producir un valor.
+# Los tipos en python son int, float, str, list, dict, tuple, class, function, etc
+# Es importante decir que en python todo es un objeto.
+# Cada que creas un objeto, este se almacena en el namespace actual.
+# El name space es un dict con todos nuestros nombres. cada nombre a su vez crea par sí un namespace.
+# El ese namespace puedes definir nombres locales y funciones, es decir, atributos y métodos de ese objeto.
+# Hay dos tipos de métodos de las clases o tipos y sus instancias: Los accesores, que leen los valores del objeto, no pueden modificar y coían valores y métodos mutadores, que si pueden modificar los atributos del objeto.
+# Cuando una clase no tiene metodos mutadores es un tipo o clae inmutable, cuando la clase o tipo tiene métodos mutadores decimos que es un tipo o clase mutable
+# Mutables: list, dict, no se si bool; inmutables: str, int, float, tuple
+# Cuando ese nombre es un objeto tipo función o clase, aparte de crear su namespace como objeto, también crea un scope, que es su entorno local o namespace de ejecución.
+# El namespace es el lugar actual del código, donde las variables son directamente visibles y accesibles.
+# Para resolver scope de nombres, python usa la regla LEGB
+
+# Algoritmos
+
