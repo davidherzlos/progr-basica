@@ -1,5 +1,6 @@
 var palabra;
 function inicio () {
+	// Se ejecuta cuando carga el dom
 	
 	// Banco de palabras y pistas
 	var poolPalabras = [["Holanda", "Es un país de Europa"],
