@@ -1,0 +1,109 @@
+Metodología:
+
+    Development plan (Para estructurar e
+    Incrememtal development, para hacer funciones
+    Hacer refactory
+    Incorporar pep8 es muy importante y evitar antipatrones
+
+Patrones:
+
+    Guess and check para validar condicionales
+    Guardian para verificar el input
+
+Buenas prácticas (evitar antipatrones)
+
+    Corrección:
+
+        No mezclar espacios y tabs
+        No usar valores mutables como argumentos por defecto en las funciones, usar valor sentinela
+        No omitir break stament en loops con clause
+        Usar adecuadamente else en loops
+        Hacer asignación multiple realizando unpacking en lugar de hacer asignaciones por separado
+        Cuidar no sobreescribir nombres cuando se importan módulos
+        Dar nombres de parametros únicos en una función
+        Jamás sobreescribir un keyword o un identifier, usar nombres descriptivos
+        No usar break o return cuando no hay un loop, por ejemplo en una función
+        No usar incremento al estilo C
+        Para formatear strings y concaenar con otros tipos, usar el método.format()
+        NO usar deadcode en las funciones
+        Numerar los remplazos de las cadenas formateadas con el método format()
+        Evitar definir argumentos que no se van a usar dentro de las funciones: si no se sabe cuantos argumentos habrá, se puede usar una lista o un dict
+        Hacer manejo de excepciones para validar inputs
+        Evaluar una sola vez las condiciones cuando se usen if-elif statements
+        Usar extend para concatenar listas no locales, en ligar de +=
+        Nunca nombrar a un parámetro igul una variable de ambito global que se va a usar en la función(python se confunde)
+        UNCA PASAR EL MISMO PARAMETRO de manera posicional y como keyword
+        Ser coherete con los argumentos posicionales que se definen y se pasan, dene ser el mismo numero
+        No pasar argumento keyword no esperado en la función
+        Hacer que las funciones retornen algo si se van a asignar a una variable
+        Validar scope en los loops
+        Evitar loops anidados para grandes cantidades de datos, plantear un tratamiento distinto.
+
+
+    Mantenibilidad:
+
+        Hacer un flujo de ejecución lo mas sencillo posible
+        Importar módulos de la manera adecuada:
+            Ser mas especificos
+            En caso de que sean muchos: importar el modulo completo
+            Usar import math as 'name'
+        Usar with para abrir archivos(python2)
+        Realizar manejo de excepciones si una función puediera retornar varios tipos de valores
+        No usar variables globales y de ser posible, encapsularlas en objetos
+        No usar letras simples para identificadores, usar nombres descriptivos
+        evitar * en import de modulos
+        evitar espacios en blanco en nombres de campos de remplazo de cadenas formateadas
+        Documentar todas las clases, módulos, métodos y funciones
+        evitar usar len() para saber si algo está vacio
+        evitar usar len y range para obtener el indice la secuencia o iterable en un loop, mejor usar enumerator()
+        Evitar kwargs temporales en funciones
+        Usar constantes como valores por defecto de funciones(analizar mas, suena bien, inclusive se puede hacer un archivos de settings co esta idea)
+        Usar EAFP para trabajar con archvos
+
+
+    Legibilidad:
+        Una vez mas usar excepciones y combinarlas con guess and check
+        No comparar cosas con True y None, usar el operador is
+        Usar tuplas nombradas para manejar multiples valores de una función
+        No poner info de tipos en nombres de variables
+        Usar loops pythonicos
+        evitar senencias if anidadas cuando sea posible usar operadores lógicos, hay excepciones a veces, como cuando hay un else, sólo cuando sea posible
+        No encadenar expresiones de comparación, usar operadores lógicos en su lugar (se contradice)
+        Evitar global statement en scope global
+        NO duplicar keys en los dict
+        evitar pass statements donde no se necesiten
+        Es mejor usar .format() que el operador % en los string interpolation
+        Evitar repetir nombre en expresiones de comparación, usar si es posible el operador in (solo el caso de or) inclusive funciona usando el operador not
+        Nunca asignar expresiones lambda a una variable
+        Trata de escribir expresiones lógicas que sean mas idiomaticas, por ejemplo, en lugar de not is, usar is not
+        Usar is o is not, para comparar con None
+        No abusar de variables temporales, sobre todo cuando haga el código dificil de leer
+        Inicializar dicts de manera literal de preferencia y no con el contructir o al estilo java
+        Usar expresiones de comparación encdenadas usando la sintaxis corta(se contradice con la que sugierer usar opeadores lógicos)
+        Usar is instance de preferencia para validar el tipo de objeto(inclusive se puede usar una lista como segundo argumento)
+        Evitar comentarios in-line, mejor que estén en linea separada (pep8)
+        Evitar paréntesis inecesarios cuando se usan keywords(ej. return(6))
+        Usar abreviaciones comunes para módulos
+
+
+
+
+
+
+
+
+Cosas que puedes validar con booleans (Valores truthy y falsy) es parte de estudiar los objetos por separado
+
+    Que algo exista o no(condiion)
+    Que tenga un valor (condición y relacionales)
+    que sea de un tipo (relcionales)
+    que sea el mismo objetos (condicion)
+    is checa identidad, == checa igualdad
+    revisr el pep8
+    Los objetos tienen identidad, tipo, valor, y cualidad de truthy o falsy
+    Dicen que scopes y mutabilidad van mucho de la mano
+    Analizar scope y binding
+    aprende a usar assert, exceptions, list comprehesions y
+    Hacer manejo de excepciones validar inputs
+    Averiguar que es yield
+

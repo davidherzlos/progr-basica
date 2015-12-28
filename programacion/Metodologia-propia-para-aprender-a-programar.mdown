@@ -28,7 +28,7 @@ Recursos idóneos: Mapas conceptuales, redes semánticas, dibujos, ejemplos, des
 Aprendo simultáneamente los 3 lenguajes meta (ruby, python y js) tomando siempre como punto de partida las ciencias de la computación en python:
 	- Sólo se debe validar en general y entender que cada lenguaje tiene reglas y excepciones de manera heterogenea, conviene no tratar de memorizarlos todos, sólo los importantes.
 	- Las particularidades no significan un impedimento. Sólo es necesario tomarlas en cuenta y reflexionarlas desde el marco general aprendido.
-	- Aprendo temas clave en orden de dificultad y tomo el marco general de la algoritmica. Recuerda, la algoritmica y python mandan antes. 
+	- Aprendo temas clave en orden de dificultad y tomo el marco general de la algoritmica. Recuerda, la algoritmica y python mandan antes.
 	- Aprendo lo que evaluo me permitirá escribir programas más rápido (Sondeo de qué es importante aprender)
 	- Abordo tema por tema, con tiempo suficiente para cada uno, se recomienda ser lo mas sistemático posible en esta etapa.
 	- Lo importante es que saber que estos tres lenguajes siguen casi los mismos principios y conceptos, pero cada uno a su manera, en mayor o menor grado

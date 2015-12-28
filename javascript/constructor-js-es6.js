@@ -1,3 +1,4 @@
+
 // Un contructor de objetos en ES6
 
 class Mujer{
@@ -5,9 +6,10 @@ class Mujer{
 	constructor(nombre, cabello){
 		this.nombre = nombre;
 		this.cabello = cabello;
+
 		this.presentarse = function () {
 			alert(this.nombre + this.cabello);
 		}
 	}
 }
-var fab = new Mujer("Fabiola Flores", "Negro y qué");
+var fab = new Mujer("Fabiola Flores", "Negro");
