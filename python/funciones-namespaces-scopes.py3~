@@ -18,7 +18,7 @@ def funcion1():
 
 		def funcion111():
 			print("Mi valor en funcion111 es:", x, y)
-			pass
+			passp
 
 print(x, y)
 

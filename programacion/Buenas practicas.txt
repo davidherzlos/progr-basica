@@ -4,6 +4,7 @@ Metodología:
     Incrememtal development, para hacer funciones
     Hacer refactory
     Incorporar pep8 es muy importante y evitar antipatrones
+    Usar código scafolding
 
 Patrones:
 
@@ -12,17 +13,22 @@ Patrones:
 
 Buenas prácticas (evitar antipatrones)
 
-    Corrección:
-
+    Corrección
+        Incluir codificación y shebang
         No mezclar espacios y tabs
+        Buscar comportamiento por defecto si no se obtiene lo esperado
+        Jamás sobreescribir un keyword o un identifier, usar nombres descriptivos
+        Dar nombres de parametros únicos en una función
+        Nunca nombrar a un parámetro igul una variable de ambito global que se va a usar en la función(python se confunde)
+        Validar scope en los loops
+
+
         No usar valores mutables como argumentos por defecto en las funciones, usar valor sentinela
         No omitir break stament en loops con clause
         Usar adecuadamente else en loops
         Hacer asignación multiple realizando unpacking en lugar de hacer asignaciones por separado
         Cuidar no sobreescribir nombres cuando se importan módulos
-        Dar nombres de parametros únicos en una función
-        Jamás sobreescribir un keyword o un identifier, usar nombres descriptivos
-        No usar break o return cuando no hay un loop, por ejemplo en una función
+        No usar break o return cuando no hay un loop, por ejemplo en una función ??
         No usar incremento al estilo C
         Para formatear strings y concaenar con otros tipos, usar el método.format()
         NO usar deadcode en las funciones
@@ -31,12 +37,10 @@ Buenas prácticas (evitar antipatrones)
         Hacer manejo de excepciones para validar inputs
         Evaluar una sola vez las condiciones cuando se usen if-elif statements
         Usar extend para concatenar listas no locales, en ligar de +=
-        Nunca nombrar a un parámetro igul una variable de ambito global que se va a usar en la función(python se confunde)
         UNCA PASAR EL MISMO PARAMETRO de manera posicional y como keyword
         Ser coherete con los argumentos posicionales que se definen y se pasan, dene ser el mismo numero
         No pasar argumento keyword no esperado en la función
         Hacer que las funciones retornen algo si se van a asignar a una variable
-        Validar scope en los loops
         Evitar loops anidados para grandes cantidades de datos, plantear un tratamiento distinto.
 
 
@@ -47,6 +51,8 @@ Buenas prácticas (evitar antipatrones)
             Ser mas especificos
             En caso de que sean muchos: importar el modulo completo
             Usar import math as 'name'
+
+
         Usar with para abrir archivos(python2)
         Realizar manejo de excepciones si una función puediera retornar varios tipos de valores
         No usar variables globales y de ser posible, encapsularlas en objetos
@@ -62,10 +68,12 @@ Buenas prácticas (evitar antipatrones)
 
 
     Legibilidad:
-        Una vez mas usar excepciones y combinarlas con guess and check
         No comparar cosas con True y None, usar el operador is
         Usar tuplas nombradas para manejar multiples valores de una función
+        No abusar de variables temporales, sobre todo cuando haga el código dificil de leer, pero sí usarlas para hacer el debugging mas facil
+
         No poner info de tipos en nombres de variables
+        Una vez mas usar excepciones y combinarlas con guess and check
         Usar loops pythonicos
         evitar senencias if anidadas cuando sea posible usar operadores lógicos, hay excepciones a veces, como cuando hay un else, sólo cuando sea posible
         No encadenar expresiones de comparación, usar operadores lógicos en su lugar (se contradice)
@@ -77,18 +85,12 @@ Buenas prácticas (evitar antipatrones)
         Nunca asignar expresiones lambda a una variable
         Trata de escribir expresiones lógicas que sean mas idiomaticas, por ejemplo, en lugar de not is, usar is not
         Usar is o is not, para comparar con None
-        No abusar de variables temporales, sobre todo cuando haga el código dificil de leer
         Inicializar dicts de manera literal de preferencia y no con el contructir o al estilo java
         Usar expresiones de comparación encdenadas usando la sintaxis corta(se contradice con la que sugierer usar opeadores lógicos)
         Usar is instance de preferencia para validar el tipo de objeto(inclusive se puede usar una lista como segundo argumento)
         Evitar comentarios in-line, mejor que estén en linea separada (pep8)
         Evitar paréntesis inecesarios cuando se usan keywords(ej. return(6))
         Usar abreviaciones comunes para módulos
-
-
-
-
-
 
 
 

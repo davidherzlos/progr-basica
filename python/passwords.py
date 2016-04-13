@@ -1,94 +1,129 @@
-# _*_ coding: utf-8 _*_
-"""Función principal, buena práctica"""
 def main():
-    """Función principal, buena práctica"""
     import random
 
-    # Universo de caracteres para generar contraseña
-    universo_caracteres = {
-        'letras': "abcdefghijklmnopqrstuvwxyz",
-        'numeros': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
-        'caracteres_especiales': '#%&$*~'
+    # Strings map used as source for passwords
+    character_map = {
+        'letters': "abcdefghijklmnopqrstuvwxyz",
+        'numbers': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+        'special_chars': '#%&$*~'
     }
 
-    def get_random_char(tipo):
-        """Genera un caracter random según el parámetro dado"""
-        if tipo == 'alfanumerico':
-            return random.choice(universo_caracteres['letras'])
-        if tipo == 'alfanumerico_mayusc':
-            return random.choice(universo_caracteres['letras']).upper()
-        if tipo == 'numerico':
-            return str(random.choice(universo_caracteres['numeros']))
-        if tipo == 'especial':
-            return random.choice(universo_caracteres['caracteres_especiales'])
+    # ##Functions##
 
-    # TODO: Terminar la función que prepara la entrada del usuario
-    def ask_user():
-        """Procesa la entrada del usuario"""
+    # TODO: Use 'guess and check' and 'guardian' patterns.
+    # TODO: Refactor functions into OOP
 
-        numero_passwords = int(input('¿Cuantas contraseñas quieres?\n'))
-        longitud_password = int(input('¿De cuantos caracteres?\n'))
-        mayusculas = bool(input('¿Mayúsculas?. Enter para omitir s para aceptar\n'))
-        numericos = bool(input('¿Números?. Enter para omitir, s para aceptar\n'))
-        especiales = bool(input('¿Caracteres especiales? Enter para omitir, s para aceptar\n'))
+    def ask_user_options():
+        """ User options
 
-        return [numero_passwords, longitud_password, mayusculas, numericos, especiales]
+        Ask user for input and returns a tuple with options for password
+        generation.
 
-    opciones = ask_user()
+        """
+        while True:
+            try:
+                print('¿Cuantas contraseñas quieres?')
+                num_op = int(input())
+                if num_op <= 0:
+                    raise ValueError
+                else:
+                    break
+            except ValueError:
+                print('Debes escribir un número mayor que 0.')
+                continue
+        while True:
+            try:
+                print('¿De cuantos caracteres?. 8 como mínimo.')
+                long_op = int(input())
+                if long_op < 8:
+                    raise ValueError
+                else:
+                    break
+            except ValueError:
+                print('Debes escribir un número igual o mayor que 8')
+                continue
 
-    def make_password(np, lp, may, num, esp):
-        """Generar el password"""
-        __name__ = "el pass"
+        print('¿Mayúsculas?. S para incluir o enter para omitir')
+        mayusc_op = bool(input())
+        print('¿Números?. S para incluir o enter para omitir')
+        numbers_op = bool(input())
+        print('¿Caracteres especiales?. S para incluir o enter para omitir')
+        special_op = bool(input())
+        print("Escribe el nombre del archivo")
+        f_name_op = str(input())
+        return (num_op, long_op, mayusc_op, numbers_op, special_op, f_name_op)
 
-        # Bucle que genera todos los passwords y los imprime
-        for i in range(np):
-            password_crudo = ''
+    # TODO: improve this function
+    def get_random_char(char_type='alpha'):
+        """Take character type as a parameter and returns a random character"""
 
-            # Bucle que genera la cadena cruda de un password
-            for i in range(lp):
-                password_crudo = password_crudo + get_random_char('alfanumerico')
+        if char_type is 'alpha':
+            return random.choice(character_map['letters'])
+        if char_type is 'mayusc_alpha':
+            return random.choice(character_map['letters']).upper()
+        if char_type is 'numeric':
+            return str(random.choice(character_map['numbers']))
+        if char_type is 'special':
+            return random.choice(character_map['special_chars'])
 
-            def add_extra_chars(passw_c, char):
-                """Procesa las opciones del password y lo formatea"""
+    def add_extra(base_password, char_number, char_type):
+        """Process user options and add extra characters to actual password"""
 
-                # Procesar opciones
-                if char == 'alfanumerico_mayusc':
-                    veces = int((len(passw_c) * .30))
-                if char == 'numerico':
-                    veces = int((len(passw_c) * .20))
-                if char == 'especial':
-                    veces = int((len(passw_c) * .10))
+        # TODO: Random characters and replacing over concatenation
+        if char_number is 0:
+            return base_password
+        formatted = base_password + get_random_char(char_type)
+        formatted = formatted[1:]
+        formatted = add_extra(formatted, char_number - 1, char_type)
+        return formatted
 
-                def insert_char(p, v, ch):
-                    """Formatea el password según opciones"""
+    def make_pass(num=10, long_p=8, mayusc=False,
+                  numbers=False, specials=False, fname=None):
+        """Make passwords with user options as arguments"""
 
-                    # TODO: Caracteres aletorios y remplazo en lugar de concatenación
-                    if v == 0:
-                        return p
-                    p = p + get_random_char(ch)
-                    p = p[1:]
-                    return insert_char(p, v - 1, ch)
+        # Create a file if option exist
+        if fname:
+            archivo = open(fname, 'w')
 
-                # Formatear password
-                passw_f = insert_char(passw_c, veces, char)
-                return passw_f
+        # Generate password
+        for i in range(num):
 
-            # Procesar el password crudo y formatearlo si hay opciones
-            if may is True:
-                password_crudo = add_extra_chars(password_crudo, 'alfanumerico_mayusc')
-            if num is True:
-                password_crudo = add_extra_chars(password_crudo, 'numerico')
-            if esp is True:
-                password_crudo = add_extra_chars(password_crudo, 'especial')
+            # First a raw string used as a base password
+            raw_string = ''
+            for i in range(long_p):
+                raw_string = raw_string + get_random_char('alpha')
 
-            # Preparar el password para imprimirlo por pantalla
-            password_formateado = password_crudo
-            password_formateado = list(password_formateado)
-            random.shuffle(password_formateado)
-            password_formateado = ''.join(password_formateado)
-            print(password_formateado)
+            # Add extra characters to raw string if user options exist
 
-    make_password(*opciones)
+            base_pass = raw_string
+            # Determines proportionally how many extra characters
+            # TODO: need to be fixed with mininum characters(8)
+            if mayusc is True:
+                chars_num = int((len(base_pass) * .38))
+                base_pass = add_extra(base_pass, chars_num, 'mayusc_alpha')
+            if numbers is True:
+                chars_num = int((len(base_pass) * .25))
+                base_pass = add_extra(base_pass, chars_num, 'numeric')
+            if specials is True:
+                chars_num = int((len(base_pass) * .13))
+                base_pass = add_extra(base_pass, chars_num, 'special')
+
+            # Shuffle base_pass characters and print final password
+            formatted_pass = list(base_pass)
+            random.shuffle(formatted_pass)
+            final_password = ''.join(formatted_pass)
+
+            # Writes passwords to file if name exist
+            if fname:
+                archivo.write(final_password + '\n')
+            else:
+                print(final_password)
+        if fname:
+            archivo.close()
+
+    # ##Main algorithm##
+    user_options = ask_user_options()
+    make_pass(*user_options)
 
 if __name__ == '__main__':
     main()
